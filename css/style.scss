@@ -5,16 +5,141 @@ $base-color: #ffffff;
 $accent-color: #00D456;
 $danger-color: #FF3100;
 
+body {
+  font-family: Roboto, sans-serif;
+}
+
+section {
+  margin-top: 30px;
+  padding: 15px;
+  box-shadow: 0 0 10px 2px $active-color;
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+
+    color: $active-color;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  &:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+/************ HEADER ************/
+
+.title {
+  background-image: url("../img/title-bg.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: calc(100vh - 58px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title-block {
+    background-color: rgba(255,255,255, 0.4);
+    border-radius: 5px;
+
+    ul {
+      margin: 0;
+    }
+  }
+
+  .title-text {
+    height: 100%;
+    font-weight: 800;
+  }
+}
+
+nav {
+  background-color: $base-color;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.20), 0 5px 5px rgba(0, 0, 0, 0.20);
+
+  .navbar-nav .nav-item .nav-link {
+    color: $active-color;
+    border-radius: 3px;
+    transition: font-weight 1s, background-color 1s, color 1s;
+
+    &:hover, &:active, &:focus {
+      background-color: $active-color;
+      color: $base-color;
+      font-weight: bold;
+    }
+  }
+
+  .navbar-brand img {
+    width: 30px;
+    height: 30px;
+  }
+
+  button.navbar-toggler.custom-toggler {
+    color: $active-color;
+    border-color: $active-color;
+    transition: color 1s, background-color 1s, transform 1s;
+    padding: 4px 6.5px;
+
+    &:hover {
+      color: $base-color;
+      background-color: $active-color;
+      transform: rotate(360deg);
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+      }
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0,139,200)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+  }
+}
+
+/************ FOOTER ************/
+
+footer {
+  background-color: $active-color;
+  color: $base-color;
+  padding: 15px;
+  text-align: center;
+}
+
 /************ ABOUT-US ************/
 
 
 
 /************ NEWS ************/
+.news-card {
 
+}
 
 
 /************ WORKING-METHODS ************/
+.method-card {
+  background-color: $accent-color;
+  color: $base-color;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
 
+  h2 {
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  p {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+  }
+}
 
 
 /************ OFFER ************/
@@ -22,7 +147,11 @@ $danger-color: #FF3100;
 
 
 /************ GALLERY ************/
-
+#gallery {
+  div {
+    justify-content: center;
+  }
+}
 
 
 /************ CONTACT ************/
