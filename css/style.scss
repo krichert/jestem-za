@@ -12,22 +12,32 @@ body {
 section {
   margin-top: 30px;
   padding: 15px;
-  box-shadow: 0 0 10px 2px $active-color;
+  //box-shadow: 0 0 10px 2px $active-color;
 
   h1 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 15px;
-
-    color: $active-color;
   }
 
   h2 {
     font-size: 1.8rem;
   }
 
-  &:last-child {
-    margin-bottom: 30px;
+  &.bg-base {
+    h1 {
+      color: $active-color;
+    }
+  }
+
+  &.bg-active {
+    background-color: $active-color;
+    color: $base-color;
+
+    h1 {
+      //text-shadow: 1px 1px $accent-color, -1px -1px $accent-color, -1px 1px $accent-color, 1px -1px $accent-color;
+      text-shadow: 2px 2px $accent-color;
+    }
   }
 }
 
@@ -45,7 +55,7 @@ section {
   align-items: center;
 
   .title-block {
-    background-color: rgba(255,255,255, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 5px;
 
     ul {
@@ -56,6 +66,27 @@ section {
   .title-text {
     height: 100%;
     font-weight: 800;
+
+    h3 {
+      color: $active-color;
+    }
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        padding: 3px;
+        margin: 3px 0;
+        color: $base-color;
+        background-color: $active-color;
+        border-radius: 3px;
+
+        .fa-long-arrow-right {
+          margin: 0 5px;
+        }
+      }
+    }
   }
 }
 
@@ -107,19 +138,23 @@ nav {
 footer {
   background-color: $active-color;
   color: $base-color;
-  padding: 15px;
-  text-align: center;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  font-size: 0.8rem;
 }
 
 /************ ABOUT-US ************/
 
-
-
 /************ NEWS ************/
+
+#news {
+  hr {
+    border-top: 1px solid $accent-color;
+  }
+}
 .news-card {
 
 }
-
 
 /************ WORKING-METHODS ************/
 .method-card {
@@ -141,10 +176,30 @@ footer {
   }
 }
 
-
 /************ OFFER ************/
+#offer {
+  .offer-card {
+    border: 1px solid $accent-color;
+    box-shadow: 0 0 3px 1px $accent-color;
+    margin: 10px 0;
 
+    table {
+      td {
+        text-align: center;
+        width: 200px;
+        padding: 8px;
+        font-size: 1.2rem;
+      }
+      .icon-cell {
+        width: 30px;
 
+        span {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
 
 /************ GALLERY ************/
 #gallery {
@@ -153,7 +208,31 @@ footer {
   }
 }
 
-
 /************ CONTACT ************/
 
+#contact {
+  img {
+    max-width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 14px $accent-color, 0 0 5px $accent-color;
+  }
+
+  table {
+    tr {
+      border-bottom: 1px solid $accent-color;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    td {
+      padding: 8px;
+    }
+    .icon-cell {
+      width: 30px;
+    }
+  }
+
+}
 
