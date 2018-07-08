@@ -12,7 +12,6 @@ body {
 section {
   margin-top: 30px;
   padding: 15px;
-  //box-shadow: 0 0 10px 2px $active-color;
 
   h1 {
     text-align: center;
@@ -35,8 +34,7 @@ section {
     color: $base-color;
 
     h1 {
-      //text-shadow: 1px 1px $accent-color, -1px -1px $accent-color, -1px 1px $accent-color, 1px -1px $accent-color;
-      text-shadow: 2px 2px $accent-color;
+      text-shadow: 2px 2px 5px $accent-color;
     }
   }
 }
@@ -53,6 +51,10 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  img {
+    max-width: 150px;
+  }
 
   .title-block {
     background-color: rgba(255, 255, 255, 0.4);
@@ -195,6 +197,7 @@ footer {
 
         span {
           font-size: 1.8rem;
+          color: $accent-color;
         }
       }
     }
@@ -205,6 +208,12 @@ footer {
 #gallery {
   div {
     justify-content: center;
+    text-align: center;
+  }
+
+  img {
+    transition: opacity 1s, transform 1s;
+    max-width: 150px;
   }
 }
 
