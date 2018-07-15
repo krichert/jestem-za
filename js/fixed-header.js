@@ -8,7 +8,6 @@ $(document).ready(function () {
         $windowHeight = $(this).height();
         $navbarElement = $('nav.navbar');
 
-        // section title has 80vh
         if ($scrollPosition > ($windowHeight - 58)) {
             $navbarElement.addClass('fixed-top');
         } else {

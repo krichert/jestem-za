@@ -4,6 +4,7 @@ $active-color: #008bc8;
 $base-color: #ffffff;
 $accent-color: #00D456;
 $danger-color: #FF3100;
+$handwriting-font: 'Caveat', cursive;
 
 body {
   font-family: Roboto, sans-serif;
@@ -13,18 +14,18 @@ section {
   margin-top: 30px;
   padding: 15px;
 
-  h1 {
+  h2 {
     text-align: center;
-    font-size: 2rem;
     margin-bottom: 15px;
+    font-family: $handwriting-font;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   &.bg-base {
-    h1 {
+    h2 {
       color: $active-color;
     }
   }
@@ -33,7 +34,7 @@ section {
     background-color: $active-color;
     color: $base-color;
 
-    h1 {
+    h2 {
       text-shadow: 2px 2px 5px $accent-color;
     }
   }
@@ -46,11 +47,12 @@ section {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: calc(100vh - 58px);
+  min-height: calc(100vh - 56px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: $handwriting-font;
 
   img {
     max-width: 150px;
@@ -69,13 +71,16 @@ section {
     height: 100%;
     font-weight: 800;
 
-    h3 {
+    h1 {
       color: $active-color;
+      text-align: right;
+      width: 100%;
     }
 
     ul {
       padding: 0;
       list-style-type: none;
+      font-size: 1.2rem;
 
       li {
         padding: 3px;
@@ -92,14 +97,32 @@ section {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .title {
+    h1 {
+      text-align: center !important;
+    }
+    ul {
+      margin: auto !important;
+    }
+  }
+}
+
 nav {
   background-color: $base-color;
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.20), 0 5px 5px rgba(0, 0, 0, 0.20);
+  font-family: $handwriting-font;
+
+  &.navbar-custom {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
   .navbar-nav .nav-item .nav-link {
     color: $active-color;
     border-radius: 3px;
     transition: font-weight 1s, background-color 1s, color 1s;
+    font-size: 1.2rem;
 
     &:hover, &:active, &:focus {
       background-color: $active-color;
@@ -109,8 +132,8 @@ nav {
   }
 
   .navbar-brand img {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
   }
 
   button.navbar-toggler.custom-toggler {
@@ -154,27 +177,58 @@ footer {
     border-top: 1px solid $accent-color;
   }
 }
+
 .news-card {
 
 }
 
 /************ WORKING-METHODS ************/
 .method-card {
-  background-color: $accent-color;
+  background-color: $active-color;
   color: $base-color;
   border-radius: 3px;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+  padding: 0 5px;
 
-  h2 {
+  .expand-btn {
+    bottom: 0;
+    background-color: $accent-color;
+    border: solid 5px $active-color;
+    border-radius: 10px;
+    color: $active-color;
+    transition: color 1s, background-color 1s;
+
+    &:hover, &:active, &:focus {
+      outline: 0;
+    }
+
+    &:hover {
+      background-color: $base-color;
+    }
+  }
+
+  h3 {
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 15px;
     margin: 0;
+    font-family: $handwriting-font;
+    font-size: 1.5rem;
   }
 
   p {
-    text-align: center;
+    text-align: justify;
     padding: 15px;
     margin: 0;
+    font-size: 0.8rem;
+  }
+
+  ul {
+    padding: 15px;
+    padding-left: 30px;
+    list-style-type: square;
+    li {
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -209,20 +263,34 @@ footer {
   div {
     justify-content: center;
     text-align: center;
+    margin-top: 15px;
   }
 
   img {
     transition: opacity 1s, transform 1s;
-    max-width: 150px;
   }
 }
 
 /************ CONTACT ************/
 
 #contact {
-  img {
-    max-width: 150px;
+  img.contact {
+    max-width: 125px;
+    max-height: 125px;
     border-radius: 50%;
+    box-shadow: 0 0 14px $accent-color, 0 0 5px $accent-color;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+    min-height: 100px;
+    max-width: 300px;
+    margin: auto;
     box-shadow: 0 0 14px $accent-color, 0 0 5px $accent-color;
   }
 
@@ -237,6 +305,11 @@ footer {
 
     td {
       padding: 8px;
+
+      a {
+        color: $base-color;
+        text-decoration: none;
+      }
     }
     .icon-cell {
       width: 30px;
@@ -244,4 +317,3 @@ footer {
   }
 
 }
-
