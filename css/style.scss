@@ -7,7 +7,7 @@ $danger-color: #FF3100;
 $handwriting-font: 'Caveat', cursive;
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 section {
@@ -123,6 +123,9 @@ nav {
     border-radius: 3px;
     transition: font-weight 1s, background-color 1s, color 1s;
     font-size: 1.2rem;
+    .fa {
+      margin-right: 5px;
+    }
 
     &:hover, &:active, &:focus {
       background-color: $active-color;
@@ -179,7 +182,15 @@ footer {
 }
 
 .news-card {
+  h3 {
+    position: relative;
 
+    .date {
+      float: right;
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+  }
 }
 
 /************ WORKING-METHODS ************/
@@ -212,7 +223,7 @@ footer {
     padding: 10px 15px;
     margin: 0;
     font-family: $handwriting-font;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   p {
@@ -234,26 +245,18 @@ footer {
 
 /************ OFFER ************/
 #offer {
-  .offer-card {
-    border: 1px solid $accent-color;
-    box-shadow: 0 0 3px 1px $accent-color;
-    margin: 10px 0;
+  a {
+    color: $accent-color;
+    font-weight: bold;
+  }
 
-    table {
-      td {
-        text-align: center;
-        width: 200px;
-        padding: 8px;
-        font-size: 1.2rem;
-      }
-      .icon-cell {
-        width: 30px;
 
-        span {
-          font-size: 1.8rem;
-          color: $accent-color;
-        }
-      }
+  table {
+    td, th {
+      border: 1px solid $base-color;
+      text-align: center;
+      width: 200px;
+      padding: 6px;
     }
   }
 }
