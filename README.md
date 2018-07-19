@@ -1,3 +1,13 @@
-#jestem-za
+# jestem-za
 
-Strona dla **jestem-za**, firmy specjalizującej się w wykonywaniu terapii dla dzieci.
+Strona dla **Jestem ZA**, firmy specjalizującej się w wykonywaniu terapii dla dzieci z niepełnosprawnościami, wadami wrodzonymi oraz trudnościami.
+
+Live demo [jestem za](http(s)://krichert.github.io/jestem-za)
+
+Wykorzystane technologie
+
+* HTML5
+* CSS3
+* Boostrap
+* JavaScript
+* jQuery
