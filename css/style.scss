@@ -102,11 +102,14 @@ section {
 
 @media only screen and (max-width: 768px) {
   .title {
+    background-size: 768px;
     h1 {
       text-align: center !important;
+      font-size: 2rem !important;
     }
     ul {
       margin: auto !important;
+      font-size: 1rem !important;
     }
   }
 }
@@ -187,11 +190,25 @@ footer {
 .news-card {
   h3 {
     position: relative;
-
+    font-size: 1.2rem;
+    font-weight: 600;
     .date {
-      float: right;
-      font-size: 1.2rem;
-      margin-top: 5px;
+      font-size: 1.0rem;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .news-card {
+    h3 {
+      font-size: 1.0rem;
+    }
+    .date {
+      font-size: 0.9rem;
     }
   }
 }
@@ -294,7 +311,8 @@ footer {
   #map {
     height: 100%;
     width: 100%;
-    min-height: 100px;
+    min-height: 125px;
+    max-height: 125px;
     max-width: 300px;
     margin: auto;
     box-shadow: 0 0 14px $accent-color, 0 0 5px $accent-color;

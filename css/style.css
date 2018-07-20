@@ -61,10 +61,14 @@ section {
           margin: 0 5px; }
 
 @media only screen and (max-width: 768px) {
-  .title h1 {
-    text-align: center !important; }
-  .title ul {
-    margin: auto !important; } }
+  .title {
+    background-size: 768px; }
+    .title h1 {
+      text-align: center !important;
+      font-size: 2rem !important; }
+    .title ul {
+      margin: auto !important;
+      font-size: 1rem !important; } }
 nav {
   background-color: #ffffff;
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -114,12 +118,19 @@ footer {
   border-top: 1px solid #00D456; }
 
 .news-card h3 {
-  position: relative; }
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 600; }
   .news-card h3 .date {
-    float: right;
-    font-size: 1.2rem;
-    margin-top: 5px; }
+    font-size: 1.0rem; }
+.news-card p {
+  font-size: 0.9rem; }
 
+@media only screen and (max-width: 768px) {
+  .news-card h3 {
+    font-size: 1.0rem; }
+  .news-card .date {
+    font-size: 0.9rem; } }
 /************ WORKING-METHODS ************/
 .method-card {
   background-color: #008bc8;
@@ -185,7 +196,8 @@ footer {
 #contact #map {
   height: 100%;
   width: 100%;
-  min-height: 100px;
+  min-height: 125px;
+  max-height: 125px;
   max-width: 300px;
   margin: auto;
   box-shadow: 0 0 14px #00D456, 0 0 5px #00D456; }
