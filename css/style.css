@@ -5,18 +5,17 @@ body {
 section {
   margin-top: 30px;
   padding: 15px; }
-  section h2 {
+  section p:first-child {
     text-align: center;
     margin-bottom: 15px;
-    font-family: "Caveat", cursive; }
-  section h2 {
+    font-family: "Caveat", cursive;
     font-size: 2.5rem; }
-  section.bg-base h2 {
+  section.bg-base p:first-child {
     color: #008bc8; }
   section.bg-active {
     background-color: #008bc8;
     color: #ffffff; }
-    section.bg-active h2 {
+    section.bg-active p:first-child {
       text-shadow: 2px 2px 5px #00D456; }
 
 /************ HEADER ************/
@@ -49,8 +48,12 @@ section {
       width: 100%; }
     .title .title-text ul {
       padding: 0;
-      list-style-type: none;
-      font-size: 1.2rem; }
+      list-style-type: none; }
+      .title .title-text ul h2 {
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 0;
+        font-weight: 800; }
       .title .title-text ul li {
         padding: 3px;
         margin: 3px 0;
@@ -117,11 +120,11 @@ footer {
 #news hr {
   border-top: 1px solid #00D456; }
 
-.news-card h3 {
+.news-card p:first-child {
   position: relative;
   font-size: 1.2rem;
   font-weight: 600; }
-  .news-card h3 .date {
+  .news-card p:first-child .date {
     font-size: 1.0rem; }
 .news-card p {
   font-size: 0.9rem; }
@@ -138,6 +141,8 @@ footer {
   border-radius: 3px;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
   padding: 0 5px; }
+  .method-card a {
+    text-align: center; }
   .method-card .expand-btn {
     bottom: 0;
     background-color: #00D456;
