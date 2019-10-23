@@ -140,9 +140,15 @@ footer {
   color: #ffffff;
   border-radius: 3px;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
-  padding: 0 5px; }
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; }
   .method-card a {
     text-align: center; }
+  .method-card p.method-card-description {
+    color: #ffffff !important;
+    font-size: 1rem; }
   .method-card .expand-btn {
     bottom: 0;
     background-color: #00D456;
@@ -157,9 +163,11 @@ footer {
   .method-card h3 {
     text-align: center;
     padding: 10px 15px;
+    padding-bottom: 0;
     margin: 0;
     font-family: "Caveat", cursive;
-    font-size: 1.2rem; }
+    font-size: 1.1rem;
+    min-height: 75px; }
   .method-card p {
     text-align: justify;
     padding: 15px;

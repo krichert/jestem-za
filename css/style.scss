@@ -223,9 +223,17 @@ footer {
   border-radius: 3px;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
   padding: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 
   a {
     text-align: center;
+  }
+
+  p.method-card-description {
+	  color: $base-color !important;
+	  font-size: 1rem;
   }
 
   .expand-btn {
@@ -248,9 +256,11 @@ footer {
   h3 {
     text-align: center;
     padding: 10px 15px;
+	padding-bottom: 0;
     margin: 0;
     font-family: $handwriting-font;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+	min-height: 75px;
   }
 
   p {

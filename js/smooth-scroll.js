@@ -3,6 +3,10 @@ $(document).ready(function () {
 
     $('a[href^="#"]').on('click', function (event) {
 
+        if (event.target.getAttribute('href').includes('collapse')) {
+            return;
+        }
+
         var target = $($(this).attr('href'));
 
         $navMenuItems.each(function () {
