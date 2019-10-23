@@ -7,7 +7,6 @@ Live demo [jestem-za](https://krichert.github.io/jestem-za)
 Wykorzystane technologie
 
 * HTML5
-* CSS3
+* CSS3 (Sass)
 * Boostrap
-* JavaScript
-* jQuery
+* JavaScript (jQuery)
